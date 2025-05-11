@@ -28,6 +28,7 @@ public class StreamJava8Practice_Easy {
 		List<String> filtered = names.stream()
 									.filter(name -> name.startsWith("A"))
 									.map(String::toUpperCase)
+									.sorted()
 									.collect(Collectors.toList());
 		return filtered;
 	}
@@ -59,9 +60,9 @@ public class StreamJava8Practice_Easy {
 		
 		
 		// Filtering names string with 'A'
-		List<String> names = Arrays.asList("Alice", "Bob", "Charlie", "Amal", "Anita", "Vishesh");
+		List<String> names = Arrays.asList("Alice", "Bob", "Charlie", "Amal", "Anita", "Vishesh", "Akanksha");
 		System.out.println("Input names: " +names);
-		System.out.println("Filtered names: " +filterALetterWords(names));
+		System.out.println("Filtered names and sorted: " +filterALetterWords(names));
 		// Output: ["ALICE", "AMAL", "ANITA"]
 		
 		
