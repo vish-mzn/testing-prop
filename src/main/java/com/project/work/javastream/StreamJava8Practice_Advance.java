@@ -66,7 +66,7 @@ public class StreamJava8Practice_Advance {
 	
 	
 	public static void main(String[] args) {
-		// F
+		// 
 		List<Employee> employeeList = new ArrayList<>();
 		
 		employeeList.add(new Employee("Jasmine", "ECE", 8000.00));
@@ -75,6 +75,7 @@ public class StreamJava8Practice_Advance {
 		employeeList.add(new Employee("Vishesh", "MECH", 6000.00));
 		employeeList.add(new Employee("Zairee", "EE", 4000.00));
 		
+		
 		// Group employees by department
 		Map<String, List<String>> departmentGrouped = employeeList.stream()
 				.collect(Collectors.groupingBy(
@@ -82,16 +83,18 @@ public class StreamJava8Practice_Advance {
 					Collectors.mapping(Employee::getName, Collectors.toList())
 				));
 		
-		System.out.println(departmentGrouped +"\n");
+		System.out.println("Grouped employees based on department: \n"+ departmentGrouped +"\n");
+		
 		
 		// Sorting employee name based on salary order 
 		List<String> sortedListSalaryBase = employeeList.stream()
 				.sorted(Comparator.comparing(Employee::getSalary))
 				.collect(Collectors.mapping(Employee::getName, Collectors.toList()));
 		
-		System.out.println("Sorted base on Salary:  " + sortedListSalaryBase + "\n");
+		System.out.println("Sorted Employees on Salary:  " + sortedListSalaryBase + "\n");
 		
-		// Group employees by department and average salary
+		
+		// Group employees by department and finding the average salary
 		Map<String, Double> deptAvgSaList = employeeList.stream()
 				.collect(Collectors.groupingBy(
 					Employee::getDept, 
@@ -100,7 +103,9 @@ public class StreamJava8Practice_Advance {
 		
 		System.out.println("Dept averaged Salary:  " + deptAvgSaList + "\n");
 		
+		
 		// Finding out the second highest salary
+		// distinct elements, sorted in reverse order, skipped first element, picked the first element [findFirst()] in the end  
 		Optional<Double> secondHighestSalary = employeeList.stream()
 				.map(Employee::getSalary)
 				.distinct()
@@ -116,7 +121,13 @@ public class StreamJava8Practice_Advance {
 				.map(Employee::getSalary)
 				.distinct()
 				.collect(Collectors.toList());
-		System.out.println("Distinct salary:  " + distinctSalaries + "\n");
+		System.out.println("Distinct salaries:  " + distinctSalaries + "\n");
+		
+		
+		// Employee with min salary
+		employeeList.stream()
+				.min(Comparator.comparingDouble(Employee::getSalary))
+				.ifPresent(employee -> System.out.println("Min salary:: "+ employee.getSalary()));
 				
 		
 	}

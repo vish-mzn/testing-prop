@@ -96,7 +96,7 @@ public class StreamJava8Practice_Medium {
 	
 	
 	/*
-	 * join strings with *
+	 * flattening of List of List of String
 	 * 
 	 */
 	private static List<String> flatteningListOfLists(List<List<String>> elements) {

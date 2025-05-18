@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-public class C501_UniqueIndexInsideCircle_Modulr_Problem {
+public class C501_MODULR_UniqueIndexInsideCircle {
 
 	/*
 	 * Q. Write a function:

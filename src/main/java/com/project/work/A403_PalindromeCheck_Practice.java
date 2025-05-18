@@ -46,7 +46,7 @@ public class A403_PalindromeCheck_Practice {
 		int reverse = 0;	
 
 	    while (num != 0) {
-	    	int digit = num % 10;				// get last digit
+	    	int digit = num % 10;				// get last digit or getting the remainder
 	    	reverse = reverse * 10 + digit;		// shift left and add digit
 	    	num /= 10;							// remove last digit
 	    }

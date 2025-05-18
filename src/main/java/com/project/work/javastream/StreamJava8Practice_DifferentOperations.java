@@ -34,7 +34,7 @@ public class StreamJava8Practice_DifferentOperations {
 									.distinct()
 									.sorted()
 									.skip(0)
-									.forEach(x -> System.out.println(x+" "));
+									.forEach(x -> System.out.println(x));
 	}
 
 }
