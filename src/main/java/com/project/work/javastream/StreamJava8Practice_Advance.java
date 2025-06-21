@@ -61,6 +61,11 @@ public class StreamJava8Practice_Advance {
 			this.salary = salary;
 		}
 
+		@Override
+		public String toString() {
+			return "Employee [name=" + name + ", dept=" + dept + ", salary=" + salary + "]";
+		}
+
 	}
 	
 	
@@ -71,7 +76,7 @@ public class StreamJava8Practice_Advance {
 		
 		employeeList.add(new Employee("Jasmine", "ECE", 8000.00));
 		employeeList.add(new Employee("YanKen", "MECH", 8000.00));
-		employeeList.add(new Employee("ThaiHau", "MECH", 30000.00));
+		employeeList.add(new Employee("ThaiHau", "ECE", 30000.00));
 		employeeList.add(new Employee("Vishesh", "MECH", 6000.00));
 		employeeList.add(new Employee("Zairee", "EE", 4000.00));
 		
@@ -124,11 +129,37 @@ public class StreamJava8Practice_Advance {
 		System.out.println("Distinct salaries:  " + distinctSalaries + "\n");
 		
 		
+		
 		// Employee with min salary
 		employeeList.stream()
 				.min(Comparator.comparingDouble(Employee::getSalary))
-				.ifPresent(employee -> System.out.println("Min salary:: "+ employee.getSalary()));
-				
+				.ifPresent(employee -> System.out.println("Min salary:: "+ employee.getSalary() + "\n"));
+		
+		
+		
+		// Department wise employee count
+		Map<String, Long> resultMap = employeeList.stream()
+				.collect(Collectors.groupingBy(
+						Employee::getDept,
+						Collectors.counting()));
+		System.out.println("Department wise employee count:  " + resultMap + "\n");
+		
+		
+		
+		// Those employees whose department is 'MECH'
+		List<String> mechEmployees = employeeList.stream()
+				.filter(e -> e.getDept().equals("MECH"))
+				.map(Employee::getName)
+				.collect(Collectors.toList());
+		System.out.println("Employee whose department is 'MECH': " + mechEmployees + "\n");
+		
+		
+		// Sort Employees by Name
+		List<Employee> sortedEmployeeNameWise = employeeList.stream()
+				.sorted(Comparator.comparing(Employee::getName))
+				.collect(Collectors.toList());
+		
+		System.out.println("Name wise sorted Employees: " + sortedEmployeeNameWise + "\n");
 		
 	}
 
