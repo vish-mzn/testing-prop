@@ -9,7 +9,7 @@ public class RemoveDuplicateCharacter implements Runnable, Callable<Integer> {
 	/*
 	 * Q) Remove duplicate from strings
 	 * 
-	 * explaination: 
+	 * explanation:
 	 */
 	private static String removeDuplicates(String input) {
 		Set<Character> characterSet = new LinkedHashSet<>();
