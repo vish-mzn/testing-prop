@@ -3,7 +3,6 @@ package com.test.freecharge;
 
 public class FindJunctionNode {
 	
-	
 	static class Node {
 		int data;
 		Node next;
