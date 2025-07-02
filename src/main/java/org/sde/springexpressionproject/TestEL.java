@@ -2,25 +2,19 @@ package org.sde.springexpressionproject;
 
 import java.util.Arrays;
 
-import org.springframework.beans.factory.annotation.Value;
+//import org.springframework.beans.factory.annotation.Value;
 
 //import javax.annotation.Resource;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.expression.Expression;
 import org.springframework.expression.ExpressionParser;
 import org.springframework.expression.spel.standard.SpelExpressionParser;
 import org.springframework.expression.spel.support.StandardEvaluationContext;
-import org.sde.springexpressionproject.service.EnrichObject;
-
-import org.sde.springexpressionproject.service.InjectedService;
-import org.sde.springexpressionproject.service.ObRequest;
 
 @SpringBootApplication
 public class TestEL {
