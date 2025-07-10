@@ -1,4 +1,4 @@
-package com.test.mphasis;
+package com.project.work.javastream;
 
 import java.util.ArrayList;
 import java.util.Comparator;

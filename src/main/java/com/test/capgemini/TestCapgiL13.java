@@ -42,6 +42,8 @@ public class TestCapgiL13 {
 		
 		System.out.println(countMap);
 		
+		System.out.println(newMap);
+		
 		System.out.println(list); // prints the sorted value
 	}
 

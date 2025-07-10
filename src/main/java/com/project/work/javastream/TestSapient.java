@@ -10,7 +10,7 @@ import java.lang.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class SapientQuest {
+public class TestSapient {
 
     static class Employee {
     
