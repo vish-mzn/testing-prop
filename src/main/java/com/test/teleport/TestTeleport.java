@@ -8,28 +8,26 @@ import java.util.stream.Collectors;
 
 public class TestTeleport {
 	
-/*
- * Q1: Employee Class
- * 		Fields
- * 			Name
- * 			Age
- * 			Salary
- * 
- * Sort Employees List by Name. If names are same, sort by age.
- * 
- * 
- * 
- * 
- * The meeting schedule is about to end.
-Action Items for this meeting:
-• Change the order of age to descending in the assignment given by Balakrishnan. ~Vishesh Pahuja
- 
-• Vishesh Pahuja to practice SQL queries, specifically focusing on sorting and ordering by age in descending order. ~Vishesh Pahuja
- 
-• Prepare and solve 50 to 100 questions related to Java Core, Java 8 problems, and Spring Boot questions. ~Vishesh Pahuja
- *
- */
-	
+	/*
+	 * Q1: Employee Class
+	 * 		Fields
+	 * 			Name
+	 * 			Age
+	 * 			Salary
+	 * 
+	 * Sort Employees List by Name. If names are same, sort by age.
+	 * 
+	 * 
+	 * 
+	 * 
+	 * The meeting schedule is about to end.
+	 * Action Items for this meeting:
+	 * 
+	 * • Change the order of age to descending in the assignment given by Balakrishnan. ~Vishesh Pahuja
+	 * • Vishesh Pahuja to practice SQL queries, specifically focusing on sorting and ordering by age in descending order. ~Vishesh Pahuja
+	 * • Prepare and solve 50 to 100 questions related to Java Core, Java 8 problems, and Spring Boot questions. ~Vishesh Pahuja
+	 *
+	 */
 	static class Employee {
 		
 		private String name;
